@@ -91,12 +91,14 @@ img.my-site {
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
 }
 
-.content::after {
-	content: " Darkcode";
+.content:after {
+	content: " Darkcode ";
 	animation: text 10s linear infinite;
 	-webkit-animation: text 10s linear infinite;
 	-moz-animation: text 10s linear infinite;
 	font-size: 35px;
+	position: relative;
+	left: 0%;
 }
 @keyframes text {
 	25% {
@@ -220,9 +222,10 @@ li:after {
 	animation-duration: .7s;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
+	animation-delay: 1s;
 }
 
-li.html:after {
+#r3:checked ~ .s4 li.html:after {
 	animation-name: html;
 }
 
@@ -232,7 +235,7 @@ li.html:after {
 	}
 }
 
-li.css:after {
+#r3:checked ~ .s4 li.css:after {
 	animation-name: css;
 }
 
@@ -242,7 +245,7 @@ li.css:after {
 	}
 }
 
-li.js:after {
+#r3:checked ~ .s4 li.js:after {
 	animation-name: js;
 }
 
@@ -252,7 +255,7 @@ li.js:after {
 	}
 }
 
-li.ng:after {
+#r3:checked ~ .s4 li.ng:after {
 	animation-name: ng;
 }
 
