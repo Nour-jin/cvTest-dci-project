@@ -1,0 +1,321 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+}
+
+.s1 {
+	text-align: center;
+	color: #035d43;
+	line-height: 20px;
+}
+.s1 h1 {
+	margin-top: 70px;
+}
+.cv {
+	margin-top: 160px;
+}
+
+.slidershow {
+	width: 400px;
+	height: 700px;
+	overflow: hidden;
+}
+
+.slides h2 {
+	margin-left: 20px;
+	color: rgb(40, 0, 66);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521);
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(230, 230, 230);
+	font-family: "Ubuntu", sans-serif;
+}
+.navigation {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+.bar {
+	width: 50px;
+	height: 10px;
+	border: 2px solid #fff;
+	margin: 6px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.bar:hover {
+	background: #fff;
+}
+
+input[name="r"] {
+	position: absolute;
+	visibility: hidden;
+}
+
+.slides {
+	width: 500%;
+	height: 100%;
+	display: flex;
+}
+
+.slide {
+	width: 20%;
+	transition: 0.6s;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+.s1 img {
+	width: 54%;
+	height: 30%;
+	border-radius: 100%;
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 9);
+}
+img.my-site {
+	height: 78%;
+	width: 100%;
+}
+.content {
+	font-size: 35px;
+	color: rgb(114, 114, 114);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+}
+
+.content::after {
+	content: " Darkcode";
+	animation: text 10s linear infinite;
+	-webkit-animation: text 10s linear infinite;
+	-moz-animation: text 10s linear infinite;
+	font-size: 35px;
+}
+@keyframes text {
+	25% {
+		content: " A Disigner";
+	}
+	50% {
+		content: " A Developer";
+	}
+	75% {
+		content: " A Adminstar";
+	}
+}
+
+@-webkit-keyframes text {
+	25% {
+		content: " A Disigner";
+	}
+	50% {
+		content: " A Developer";
+	}
+	75% {
+		content: " A Adminstar";
+	}
+}
+
+@-moz-keyframes text {
+	25% {
+		content: " A Disigner";
+	}
+	50% {
+		content: " A Developer";
+	}
+	75% {
+		content: " A Adminstar";
+	}
+}
+#r1:checked ~ .s1 {
+	margin-left: 0;
+}
+#r2:checked ~ .s1 {
+	margin-left: -20%;
+}
+#r3:checked ~ .s1 {
+	margin-left: -40%;
+}
+#r4:checked ~ .s1 {
+	margin-left: -60%;
+}
+#r5:checked ~ .s1 {
+	margin-left: -80%;
+}
+.project-text {
+	background: rgb(255, 255, 255);
+	text-align: center;
+	border-radius: 15px;
+	list-style-type: none;
+	padding: 10px;
+	width: 90%;
+	text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.527);
+	transition: 1s;
+	margin-left: 10px;
+}
+.project-text a {
+	text-decoration: none;
+	color: #000;
+}
+.my-site {
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.438);
+}
+.project-text:hover {
+	background: red;
+}
+.s2 {
+	background-image: url(/img/contact.jpg);
+	height: 100%;
+}
+.s2 h2 {
+	color: #fff;
+}
+.skills {
+	width: 350px;
+	margin-top: 180px;
+}
+.back-cv {
+	background: #fff;
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.438);
+	line-height: 25px;
+	height: 72%;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+
+.il {
+	position: relative;
+	list-style: none;
+	margin: 50px 0;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+li:before {
+	content: "";
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 0;
+	width: 100%;
+	height: 15px;
+	background-color: rgba(54, 126, 223, .5);
+	border-radius: 1000px;
+}
+
+li:after {
+	content: "";
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 0;
+	width: 0;
+	height: 15px;
+	background-color: rgba(54, 126, 223, 1);
+	border-radius: 1000px;
+	animation-duration: .7s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+li.html:after {
+	animation-name: html;
+}
+
+@keyframes html {
+	to {
+		width: 90%;
+	}
+}
+
+li.css:after {
+	animation-name: css;
+}
+
+@keyframes css {
+	to {
+		width: 80%;
+	}
+}
+
+li.js:after {
+	animation-name: js;
+}
+
+@keyframes js {
+	to {
+		width: 75%;
+	}
+}
+
+li.ng:after {
+	animation-name: ng;
+}
+
+@keyframes ng {
+	to {
+		width: 60%;
+	}
+}
+
+.social-men ul {
+	padding: 0px;
+	margin: 140px 0;
+	display: -webkit-box;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.social-men ul li {
+	list-style: none;
+	margin: 0px 0px 30px;
+}
+.social-men ul li .fa {
+	color: #000000;
+	font-size: 25px;
+	line-height: 50px;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+.social-men ul li .fa:hover {
+	color: #ffffff;
+}
+.social-men ul li a {
+	position: relative;
+	display: block;
+	width: 80%;
+	height: 50px;
+	margin-left: 20px;
+	border-radius: 10px;
+	background-color: white;
+	padding-left: 40px;
+
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	-webkit-transform: translate(0, 0px);
+	transform: translate(0, 0px);
+	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-men ul li a:hover {
+	-webkit-transform: rotate(0deg) skew(0deg) translate(0, -10px);
+	transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-men ul li:nth-child(1) a:hover {
+	background-color: #3b5999;
+}
+.social-men ul li:nth-child(2) a:hover {
+	background-color: #55acee;
+}
+.social-men ul li:nth-child(3) a:hover {
+	background-color: #e4405f;
+}
+.social-men ul li:nth-child(4) a:hover {
+	background-color: #cd201f;
+}
+.social-men ul li:nth-child(5) a:hover {
+	background-color: #0077b5;
+}
